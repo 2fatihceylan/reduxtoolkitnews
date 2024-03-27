@@ -1,0 +1,29 @@
+.drawer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+}
+.drawer-container {
+    display: flex;
+    justify-content: center;
+    color: black;
+    height: 100vh;
+    width: 25%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px #cccccc;
+}
+.drawer-container > ul {
+    margin-top: 150px;
+}
+.drawer-container> ul>li {
+  list-style: none;
+    cursor: pointer;
+}
+
+.drawer-outside{
+    background-color: transparent;
+    height: 100vh;
+    width: 75%;
+}

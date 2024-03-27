@@ -11,6 +11,8 @@ function Home() {
 
     const {articles, isLoading, country} = useSelector((state)=>state.article)
 
+
+
     useEffect(()=>{
         dispatch(getArticles(country));
         dispatch(removeArticle());
@@ -36,6 +38,7 @@ function Home() {
 
   return (
     <div style={{margin:100}}>
+  
         {
             articles.map((item, index)=>(
                 <ArticleItem key={index} {...item} />
