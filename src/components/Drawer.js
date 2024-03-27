@@ -8,7 +8,7 @@ function Drawer() {
 
     const dispatch = useDispatch();
 
-    const categories = [{name: 'Business', value: 'business'},{name: 'Business', value: 'business'},{name: 'Business', value: 'business'}]
+    const categories = [{name: 'General', value: 'general'},{name: 'Business', value: 'business'},{name: 'Technology', value: 'technology'},{name: 'Sports', value: 'sports'}]
 
 
 
@@ -31,12 +31,14 @@ function Drawer() {
   return (
     <div className='drawer'>
     <div className='drawer-container'>
+        <h2>Categories</h2>
         <ul>
             {
                 categories.map((item,index)=>(
-                    <li onClick={()=>handleSelectCategory(item.value)} key={index} ><h2>{item.name}</h2></li>
+                    <li onClick={()=>handleSelectCategory(item.value)} key={index} ><h2>{item.name}</h2><hr/></li>
                 ))
             }
+            
         </ul>
     </div>
     <div onClick={handleDrawerClose} className='drawer-outside'>
