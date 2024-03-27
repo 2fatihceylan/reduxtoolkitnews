@@ -1,0 +1,23 @@
+.logoutmodal-container {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: rgba(220, 20, 60, 0.7);
+    border-radius: 30px;
+    min-height: 200px;
+    min-width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoutmodal-btns {
+
+}
+.logoutmodal-btns> button {
+    min-height: 40px;
+    min-width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 
     modalDrawer: false,
+    modalLogout: false,
 }
 
 
@@ -17,11 +18,22 @@ const modalSlice = createSlice({
         },
         closeDrawerModal: (state)=>{
             state.modalDrawer = false;
+        },
+        openLogoutModal: (state)=>{
+            state.modalLogout = true;
+        },
+        closeLogoutModal: (state)=>{
+            state.modalLogout = false;
         }
+
     }
 })
 
 
-export const {openDrawerModal, closeDrawerModal} = modalSlice.actions;
+export const {openDrawerModal, 
+    closeDrawerModal,
+    openLogoutModal,
+    closeLogoutModal
+} = modalSlice.actions;
 
 export default modalSlice.reducer;

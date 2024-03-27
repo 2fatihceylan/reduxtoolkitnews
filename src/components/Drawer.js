@@ -1,8 +1,10 @@
 import React from 'react'
 import './Drawer.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeDrawerModal } from '../redux/features/modals/modalSlice';
+import { closeDrawerModal, openLogoutModal } from '../redux/features/modals/modalSlice';
 import { categoryArticles } from '../redux/features/articles/articleSlice';
+
+
 
 function Drawer() {
 
@@ -30,6 +32,7 @@ function Drawer() {
 
   return (
     <div className='drawer'>
+      
     <div className='drawer-container'>
         <h2>Categories</h2>
         <ul>
@@ -40,6 +43,7 @@ function Drawer() {
             }
             
         </ul>
+           
     </div>
     <div onClick={handleDrawerClose} className='drawer-outside'>
     .

@@ -3,9 +3,10 @@ import { selectCountry, searchArticles, getArticles } from '../redux/features/ar
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import { openDrawerModal, closeDrawerModal } from '../redux/features/modals/modalSlice';
+import { openDrawerModal, closeDrawerModal, openLogoutModal } from '../redux/features/modals/modalSlice';
 import Drawer from './Drawer';
-
+import LogoutModal from './LogoutModal';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
 
     const currentcountry = useSelector((state)=>state.article.country)
 
-    const {modalDrawer} = useSelector((state)=>state.modal)
+    const {modalDrawer, modalLogout} = useSelector((state)=>state.modal)
 
 
     const handleSearch = (e) => {
@@ -47,6 +48,10 @@ function Navbar() {
     const handleDrawer = () => {
         dispatch(openDrawerModal());
     }
+
+    const handleLogoutModal = () => {
+        dispatch(openLogoutModal())
+    }
  
 
   return (
@@ -66,6 +71,10 @@ function Navbar() {
                 ))
             }
         </div>
+        <div>
+            <LogoutIcon onClick={handleLogoutModal}/>
+        </div>
+        {modalLogout&& <LogoutModal/>}
     </div>
   )
 }
