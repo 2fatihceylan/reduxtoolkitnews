@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+
+.navbar {
+  height: 80px;
+  background-color:darkslateblue;
+  display: flex;
+  color: white;
+  padding: 15px;
+  justify-content: space-between;
+}
+.navbar-title {
+  cursor: pointer;
+}
+.country {
+  display: flex;
+  padding: 15px;
+}
+.country > h3 {
+  margin-left: 10px;
+  cursor: pointer;
+}
